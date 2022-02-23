@@ -4,7 +4,6 @@ lives = 6
 hits = 0
 
 while lives > 0 && hits < word.length - 1
-  puts (hits.to_s + word.length.to_s)
   puts "Digite uma letra: "
   input = gets()
   has_a_hit = false
