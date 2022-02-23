@@ -8,12 +8,24 @@ Cada grupo deverá realizar um **fork** ou **clone** deste repositório e em uma
 ## Grupos
 
 ### Linguagem C/C++
+1. Jeferson
+2. Samuel
+3. Thiago
 
 ### Linguagem Java
+1. Rodrigo
+2. Luis
+3. Henrique
 
 ### Linguagem Python
+1. João Marcelo
+2. Tuanne
 
 ### Linguagem Ruby
+1. Isaac
+2. Elizangela
+3. Giovani
+
 
 ## Regras do jogo da forca
 
