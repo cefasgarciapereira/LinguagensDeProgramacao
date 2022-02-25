@@ -1,3 +1,5 @@
+require_relative 'draw-hangman'
+
 word = "BICICLETA".split("", -1)
 revealed = "_________"
 lives = 6
@@ -18,6 +20,7 @@ while lives > 0 && hits < word.length - 1
     lives = lives - 1
   end
 
+  draw_hangman(lives)
   puts(revealed)
   puts("Acertos: " + hits.to_s)
   puts("Vidas: " + lives.to_s)
