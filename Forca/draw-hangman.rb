@@ -1,6 +1,6 @@
 def draw_hangman(lives)
+  puts
   # draws upper part
-  puts('------------')
   spaces_number = 5
   if (lives < 6 && lives > 0)
     spaces_number = 0
@@ -29,7 +29,7 @@ def draw_hangman(lives)
   end
   spaces = " " * spaces_number
   print(spaces + "|")
-  puts('')
+  puts
 
   # draws bottom parts
   spaces_number = 11
@@ -46,6 +46,5 @@ def draw_hangman(lives)
   puts(spaces + "|")
   spaces = " " * 10
   puts(spaces + "/|\\")
-
-  puts('------------')
+  puts
 end

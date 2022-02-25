@@ -6,8 +6,17 @@ lives = 6
 hits = 0
 
 while lives > 0 && hits < word.length - 1
+  draw_hangman(lives)
+  puts(revealed)
+  puts
+
+  puts("Acertos: " + hits.to_s + "/" + revealed.length.to_s)
+  puts("Vidas: " + lives.to_s)
+  puts
+
   puts "Digite uma letra: "
   input = gets()
+  system "clear"
   has_a_hit = false
   word.each_with_index do |letter, index|    
     if (input.chomp.casecmp?(letter))
@@ -19,9 +28,4 @@ while lives > 0 && hits < word.length - 1
   if (!has_a_hit)
     lives = lives - 1
   end
-
-  draw_hangman(lives)
-  puts(revealed)
-  puts("Acertos: " + hits.to_s)
-  puts("Vidas: " + lives.to_s)
 end 
