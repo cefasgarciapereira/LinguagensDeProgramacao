@@ -1,8 +1,9 @@
 require_relative 'draw-hangman'
+require_relative 'generate-revealed'
 require 'set'
 
 word = "BICICLETA".split("", -1)
-revealed = "_________"
+revealed = generate_revealed(word.length - 1)
 lives = 6
 hits = 0
 guessed_letters = Set[]
