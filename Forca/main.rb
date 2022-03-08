@@ -1,8 +1,10 @@
 require_relative 'draw-hangman'
 require_relative 'generate-revealed'
+require_relative 'get-random-word'
 require 'set'
 
-word = "BICICLETA".split("", -1)
+
+word = get_random_word.chomp.split("", -1)
 revealed = generate_revealed(word.length - 1)
 lives = 6
 hits = 0
