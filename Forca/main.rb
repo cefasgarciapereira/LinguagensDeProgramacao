@@ -1,9 +1,11 @@
 require_relative 'draw-hangman'
+require 'set'
 
 word = "BICICLETA".split("", -1)
 revealed = "_________"
 lives = 6
 hits = 0
+guessed_letters = Set[]
 
 while lives > 0 && hits < word.length - 1
   draw_hangman(lives)
@@ -18,6 +20,11 @@ while lives > 0 && hits < word.length - 1
   input = gets()
   system "clear"
   has_a_hit = false
+
+  next if input.length > 2 || guessed_letters.include?(input)
+
+  guessed_letters.add(input)
+
   word.each_with_index do |letter, index|    
     if (input.chomp.casecmp?(letter))
       revealed[index] = letter
