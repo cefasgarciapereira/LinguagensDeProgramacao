@@ -36,4 +36,12 @@ while lives > 0 && hits < word.length - 1
   if (!has_a_hit)
     lives = lives - 1
   end
-end 
+end
+
+if lives == 0 
+  puts("Você perdeu :(")
+  puts("A palavra era " + word.join(""))
+else
+  puts("Parabéns, você ganhou! :)")
+end
+
